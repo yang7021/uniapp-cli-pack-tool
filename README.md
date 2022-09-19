@@ -3,6 +3,7 @@ uniapp打包工具帮你自动完成多个应用名的安卓打包
 
 
 ## 运行
+需要了解[HBuilderX cli命令行工具](https://hx.dcloud.net.cn/cli/pack?id=config),以及把配置文件写好并能成功打包
 
 ```sh
 # 1. 安装依赖

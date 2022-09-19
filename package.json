@@ -1,0 +1,22 @@
+{
+  "name": "uniapp-cli-pick-tool",
+  "version": "1.0.0",
+  "description": "uniapp打包工具帮你自动完成多个应用名的安卓打包",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.5",
+    "fs-extra": "^10.1.0",
+    "iconv-lite": "^0.6.3",
+    "strip-json-comments": "^5.0.0"
+  },
+  "keywords": []
+}
