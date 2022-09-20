@@ -4,17 +4,28 @@ uniapp打包工具帮你自动完成多个应用名的安卓打包
 
 ## 运行
 需要了解[HBuilderX cli命令行工具](https://hx.dcloud.net.cn/cli/pack?id=config),以及把配置文件写好并能成功打包
-默认读取`build.json`文件，配置文件名不一致可以修改`lib/index.js`
+默认读取`build.json`文件
 
 ```sh
 # 1. 安装依赖
 npm i
 
-# 2. 修改配置文件
-/config/config.js
+# 2. 修改package.json，根节点添加HBXCLI和buildConfig
+"HBXCLI": "D:/HBuilderX/cli.exe",
+"buildConfig":[
+    {
+        "name": "应用名a,打32位包",
+        "channels": "common,yyb,360,huawei,xiaomi,oppo,vivo"
+    },
+    {
+        "abiFilters": "armeabi-v7a", # 打32位包
+        "name": "应用名b,打32位包",   # 应用名
+        "channels": "yyb"            # 渠道包
+    }
+]
 
 # 3. 运行
-npm run build
+npx ucpt run
 ```
 
 
@@ -29,10 +40,8 @@ npm run build
 ```
 |-- 根目录
     |-- config
-    |    |-- config.js    # 配置项目目录、输出目录、应用名和渠道
     |    |-- lib
     |        |-- index.js # 核心文件
-    |    |-- index.js     #入口文件
 ```
 
 
@@ -57,7 +66,7 @@ npm run build
 ## 四、生成的目录结构
 
 ```
-|-- 输出目录
+|-- 默认dist
     |-- 年月日-版本号
     |    |-- 应用名a
     |        |-- x64

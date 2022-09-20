@@ -1,6 +1,6 @@
 {
   "name": "uniapp-cli-pack-tool",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "uniapp打包工具帮你自动完成多个应用名的安卓打包",
   "type": "module",
   "main": "index.js",
@@ -10,9 +10,17 @@
   "scripts": {
     "build": "node index.js"
   },
+  "bin": {
+    "ucpt": "bin/index.js"
+  },
   "author": "JOJO",
   "license": "ISC",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/yang7021/uniapp-cli-pack-tool"
+  },
   "dependencies": {
+    "commander": "^9.4.0",
     "dayjs": "^1.11.5",
     "fs-extra": "^10.1.0",
     "iconv-lite": "^0.6.3",

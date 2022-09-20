@@ -1,7 +1,4 @@
-import {BuildTools} from './lib/index.js'
-import config from './config/config.js'
+import BuildTools from './lib/index.js'
 
-const buildTools = new BuildTools(config)
-
-buildTools.init()
+export default new BuildTools()
 
