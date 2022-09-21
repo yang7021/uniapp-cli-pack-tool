@@ -7,8 +7,8 @@ uniapp打包工具帮你自动完成多个应用名的安卓打包
 默认读取`build.json`文件
 
 ```sh
-# 1. 安装依赖
-npm i
+# 1. 安装
+npm i uniapp-cli-pack-tool
 
 # 2. 修改package.json，根节点添加HBXCLI和buildConfig
 "HBXCLI": "D:/HBuilderX/cli.exe",
@@ -39,9 +39,8 @@ npx ucpt run
 
 ```
 |-- 根目录
-    |-- config
-    |    |-- lib
-    |        |-- index.js # 核心文件
+    | -- lib
+    |    |-- index.js # 核心文件
 ```
 
 
@@ -92,3 +91,8 @@ npx ucpt run
 
 ## 问题
 中间取消打包或者打包出错，`manifest.json`, `build.json`不会自动复原，使用前请让git的工作区为空
+
+
+# updateLog
+## 0.0.3
+1. 优化结构
