@@ -10,19 +10,21 @@ uniapp打包工具帮你自动完成多个应用名的安卓打包
 # 1. 安装
 npm i uniapp-cli-pack-tool
 
-# 2. 修改package.json，根节点添加HBXCLI和buildConfig
-"HBXCLI": "D:/HBuilderX/cli.exe",
-"buildConfig":[
-    {
-        "name": "应用名a,打32位包",
-        "channels": "common,yyb,360,huawei,xiaomi,oppo,vivo"
-    },
-    {
-        "abiFilters": "armeabi-v7a", # 打32位包
-        "name": "应用名b,打32位包",   # 应用名
-        "channels": "yyb"            # 渠道包
-    }
-]
+# 2. 修改package.json，根节点添加ucptConfig
+"ucptConfig": {
+    "HBXCLI": "D:/HBuilderX/cli.exe",
+    "buildConfig":[
+        {
+            "name": "应用名a,打32位包",
+            "channels": "common,yyb,360,huawei,xiaomi,oppo,vivo"
+        },
+        {
+            "abiFilters": "armeabi-v7a", # 打32位包
+            "name": "应用名b,打32位包",   # 应用名
+            "channels": "yyb"            # 渠道包
+        }
+    ]
+}
 
 # 3. 运行
 npx ucpt run
