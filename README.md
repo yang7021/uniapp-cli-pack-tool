@@ -23,7 +23,8 @@ npm i uniapp-cli-pack-tool
             "name": "应用名b,打32位包",   # 应用名
             "channels": "yyb"            # 渠道包
         }
-    ]
+    ],
+    "output": "D:/指定输出目录,默认当前项目dist"
 }
 
 # 3. 运行
