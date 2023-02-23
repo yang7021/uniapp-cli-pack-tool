@@ -22,6 +22,10 @@ npm i uniapp-cli-pack-tool
             "abiFilters": "armeabi-v7a", # 打32位包
             "name": "应用名b,打32位包",   # 应用名
             "channels": "yyb"            # 渠道包
+        },
+        {
+            "platform": "h5", # 打包h5
+            "webTitle": "网站标题"
         }
     ],
     "output": "D:/指定输出目录,默认当前项目dist"
