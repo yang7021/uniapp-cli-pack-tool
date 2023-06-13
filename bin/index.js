@@ -14,6 +14,7 @@ program.version(JSON.parse(fs.readFileSync(Path.join(__dirname, '/node_modules/u
 
 program
     .option('-o, --output [type]', '输出目录')
+    .option('-t, --type [type]', '打包类型，默认云打包')
 
 program.parse(process.argv);
 

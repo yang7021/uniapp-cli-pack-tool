@@ -13,6 +13,8 @@ npm i uniapp-cli-pack-tool
 # 2. 修改package.json，根节点添加ucptConfig
 "ucptConfig": {
     "HBXCLI": "D:/HBuilderX/cli.exe",
+    "output": "D:/指定输出目录,默认当前项目dist"
+    "localOutput": "D:/安卓离线打包项目地址/simpleDemo/src/main/assets/apps", // app资源包输出地址
     "buildConfig":[
         {
             "name": "应用名a,打32位包",
@@ -28,11 +30,17 @@ npm i uniapp-cli-pack-tool
             "webTitle": "网站标题"
         }
     ],
-    "output": "D:/指定输出目录,默认当前项目dist"
 }
 
 # 3. 运行
+# 默认云打包
 npx ucpt run
+
+# h5打包
+npx ucpt run -t h5
+
+# app资源打包
+npx ucpt run -t local
 ```
 
 
@@ -103,3 +111,7 @@ npx ucpt run
 # updateLog
 ## 0.0.3
 1. 优化结构
+
+## 0.1.0
+1. 拆分云打包和h5
+2. 新增app资源打包并输出到指定位置
