@@ -10,7 +10,7 @@ uniapp打包工具帮你自动完成多个应用名的安卓打包
 # 1. 安装
 npm i uniapp-cli-pack-tool
 
-# 2. 修改package.json，根节点添加ucptConfig
+# 2. 项目根目录添加 .ucpt.config.json 文件
 "ucptConfig": {
     "HBXCLI": "D:/HBuilderX/cli.exe",
     "output": "D:/指定输出目录,默认当前项目dist"
@@ -31,6 +31,7 @@ npm i uniapp-cli-pack-tool
         }
     ],
 }
+
 
 # 3. 运行
 # 默认云打包
@@ -115,3 +116,7 @@ npx ucpt run -t local
 ## 0.1.0
 1. 拆分云打包和h5
 2. 新增app资源打包并输出到指定位置
+
+## 0.1.1
+1. 添加rollup打包
+2. 离线自动打包
